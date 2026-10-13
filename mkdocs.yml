@@ -83,3 +83,4 @@ nav:
       - Примечания к выпуску: doc-templates/release-notes.md
   - Точечные рекомендации: recommendations.md
   - Словарь и глоссарий: glossary.md
+  - Доступность текста: accessibility.md
