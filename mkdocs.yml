@@ -1,0 +1,85 @@
+site_name: Руководство по стилю документации ДелоТрек
+site_description: Правила написания и оформления документации сервиса ДелоТрек
+site_author: Команда документации ДелоТрек
+# После создания репозитория раскомментируйте и подставьте свой логин GitHub:
+# site_url: https://<логин>.github.io/style-guide-project/
+# repo_url: https://github.com/<логин>/style-guide-project
+# edit_uri: edit/main/docs/
+
+docs_dir: docs
+
+theme:
+  name: material
+  language: ru
+  features:
+    - navigation.sections
+    - navigation.top
+    - navigation.footer
+    - navigation.indexes
+    - toc.follow
+    - search.highlight
+    - content.code.copy
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/weather-night
+        name: Тёмная тема
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/weather-sunny
+        name: Светлая тема
+
+plugins:
+  - search:
+      lang:
+        - ru
+        - en
+
+markdown_extensions:
+  - toc:
+      permalink: true
+      slugify: !!python/object/apply:pymdownx.slugs.slugify
+        kwds:
+          case: lower
+  - attr_list
+  - tables
+  - pymdownx.blocks.admonition:
+      types:
+        - note
+        - tip
+        - warning
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.superfences
+
+validation:
+  nav:
+    omitted_files: warn
+    not_found: warn
+  links:
+    not_found: warn
+    anchors: warn
+    unrecognized_links: warn
+
+nav:
+  - О руководстве: index.md
+  - Стиль изложения: voice-and-tone.md
+  - Орфография и пунктуация: spelling-punctuation.md
+  - Оформление текста: text-formatting.md
+  - Правила работы с Markdown: markdown.md
+  - Шаблоны:
+      - doc-templates/index.md
+      - Инструкция: doc-templates/how-to.md
+      - Справочная статья: doc-templates/reference.md
+      - Описание метода API: doc-templates/api-method.md
+      - README: doc-templates/readme.md
+      - Примечания к выпуску: doc-templates/release-notes.md
+  - Точечные рекомендации: recommendations.md
+  - Словарь и глоссарий: glossary.md
