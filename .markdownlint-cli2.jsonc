@@ -1,0 +1,21 @@
+// Настройки markdownlint. Правила стайлгайда — в разделе docs/markdown.md
+{
+  "config": {
+    "default": true,
+    "MD003": { "style": "atx" },
+    "MD004": { "style": "dash" },
+    "MD007": { "indent": 4 },
+    "MD013": false,
+    "MD024": { "siblings_only": true },
+    "MD026": { "punctuation": ".,;:!?…" },
+    "MD029": { "style": "ordered" },
+    "MD035": { "style": "---" },
+    "MD046": { "style": "fenced" },
+    "MD048": { "style": "backtick" },
+    "MD049": { "style": "asterisk" },
+    "MD050": { "style": "asterisk" },
+    "MD055": { "style": "leading_and_trailing" }
+  },
+  "globs": ["**/*.md"],
+  "ignores": ["node_modules/**", "site/**", "examples/before/**"]
+}

@@ -1,0 +1,20 @@
+{
+  "filters": {
+    "comments": true
+  },
+  "rules": {
+    "prh": {
+      "rulePaths": [
+        "./prh.yml"
+      ]
+    },
+    "sentence-length": {
+      "max": 200,
+      "skipPatterns": [
+        "/`[^`]*`/",
+        "/\\/\\/\\/[^\\n]*/"
+      ]
+    },
+    "no-empty-section": true
+  }
+}
