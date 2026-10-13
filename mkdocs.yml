@@ -2,9 +2,9 @@ site_name: Руководство по стилю документации Де�
 site_description: Правила написания и оформления документации сервиса ДелоТрек
 site_author: Команда документации ДелоТрек
 # После создания репозитория раскомментируйте и подставьте свой логин GitHub:
-# site_url: https://<логин>.github.io/style-guide-project/
-# repo_url: https://github.com/<логин>/style-guide-project
-# edit_uri: edit/main/docs/
+site_url: https://Brockengespent.github.io/style-guide-project/
+repo_url: https://github.com/Brockengespent/style-guide-project
+edit_uri: edit/main/docs/
 
 docs_dir: docs
 
