@@ -82,4 +82,5 @@ nav:
       - README: doc-templates/readme.md
       - Примечания к выпуску: doc-templates/release-notes.md
   - Точечные рекомендации: recommendations.md
+  - Документация API: api.md
   - Словарь и глоссарий: glossary.md
