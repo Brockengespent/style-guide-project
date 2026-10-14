@@ -28,7 +28,7 @@ const PATTERNS = [
 const POLITE = word("Вы|Вас|Вам|Вами|Ваш[а-яё]*");
 
 // ДС-3: текст ссылки, который ничего не говорит без контекста
-const VAGUE_LINK_TEXT = new Set(["здесь", "тут", "сюда", "ссылка", "по ссылке", "этой ссылке", "по этой ссылке", "подробнее", "читать далее", "click here", "here"]);
+const VAGUE_LINK_TEXT = new Set(["здесь", "тут", "сюда", "ссылка", "по ссылке", "этой ссылке", "по этой ссылке", "подробнее", "читать далее", "click here", "here", "learn more", "read more", "more"]);
 
 function insideGuillemets(text, index) {
   const before = text.slice(0, index);
