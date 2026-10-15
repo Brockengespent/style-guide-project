@@ -27,6 +27,9 @@ const PATTERNS = [
 
 const POLITE = word("Вы|Вас|Вам|Вами|Ваш[а-яё]*");
 
+// ДС-3: текст ссылки, который ничего не говорит без контекста
+const VAGUE_LINK_TEXT = new Set(["здесь", "тут", "сюда", "ссылка", "по ссылке", "этой ссылке", "по этой ссылке", "подробнее", "читать далее", "click here", "here", "learn more", "read more", "more"]);
+
 function insideGuillemets(text, index) {
   const before = text.slice(0, index);
   const open = (before.match(/«/g) || []).length;
@@ -37,6 +40,12 @@ function insideGuillemets(text, index) {
 module.exports = function (context) {
   const { Syntax, RuleError, report, getSource, locator } = context;
   return {
+    [Syntax.Link](node) {
+      const text = getSource(node).replace(/^\[|\]\(.*\)$/gs, "").trim().toLowerCase().replace(/[.,:;]+$/, "");
+      if (VAGUE_LINK_TEXT.has(text)) {
+        report(node, new RuleError(`ДС-3: текст ссылки «${text}» непонятен без контекста. Опишите, куда ведёт ссылка.`));
+      }
+    },
     [Syntax.Str](node) {
       const text = getSource(node);
       for (const { re, msg } of PATTERNS) {
