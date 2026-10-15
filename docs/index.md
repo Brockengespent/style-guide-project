@@ -47,6 +47,7 @@
 | СТ | [Стиль изложения](voice-and-tone.md) |
 | ОП | [Орфография и пунктуация](spelling-punctuation.md) |
 | ОФ | [Оформление текста](text-formatting.md) |
+| ИЗ | [Скриншоты и схемы](images.md) |
 | MD | [Правила работы с Markdown](markdown.md) |
 | ТР | [Точечные рекомендации](recommendations.md) |
 | ГЛ | [Словарь и глоссарий](glossary.md) |
