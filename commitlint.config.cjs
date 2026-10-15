@@ -4,7 +4,7 @@ module.exports = {
   rules: {
     "scope-enum": [1, "always", [
       "tone", "spelling", "formatting", "markdown", "templates",
-      "recommendations", "glossary", "accessibility", "lint", "ci", "deps",
+      "recommendations", "glossary", "accessibility", "api", "lint", "ci", "deps",
     ]],
   },
 };
